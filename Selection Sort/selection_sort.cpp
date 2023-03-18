@@ -11,8 +11,12 @@ int main()
         {
             if (arr[j] < arr[min])
             {
-                swap(arr[j], arr[min]);
+                min = j;
             }
+        }
+        if (min != i)
+        {
+            swap(arr[i], arr[min]);
         }
     }
     cout << "Ascending Order :";
@@ -20,9 +24,9 @@ int main()
     {
         cout << arr[i] << " ";
     }
-    cout<<endl;
+    cout << endl;
     cout << "Descending Order :";
-    for (int i = size-1; i >= 0; i--)
+    for (int i = size - 1; i >= 0; i--)
     {
         cout << arr[i] << " ";
     }
